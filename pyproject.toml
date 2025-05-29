@@ -1,0 +1,16 @@
+[project]
+name = "llmsaememorization"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets==2.17.1",
+    "ipykernel>=6.29.5",
+    "pip>=25.1.1",
+    "plotly[express]==5.19.0",
+    "sae-lens>=3.11.2",
+    "torch>=2.7.0",
+    "tqdm>=4.67.1",
+    "transformer-lens==1.14.0",
+]

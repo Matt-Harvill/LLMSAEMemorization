@@ -6,11 +6,11 @@ import numpy as np
 import os
 from tqdm import tqdm
 
-CHUNK_LENGTH = 500  # Length of each input chunk in tokens
-CHUNK_OFFSET = 10   # Number of tokens to generate/compare
-BATCH_SIZE = 16
-DEBUG = False
-DEBUG_TRUNCATE_TOKENS = 5000
+CHUNK_LENGTH = 50  # Length of each input chunk in tokens
+CHUNK_OFFSET = 50   # Number of tokens to generate/compare
+BATCH_SIZE = 32
+DEBUG = True
+TRUNCATE_TOKENS = 50000
 
 def get_output_filename() -> str:
     """Generate output filename based on chunk parameters"""
@@ -128,8 +128,7 @@ def main():
     tokenized_text = tokenizer.encode(text, add_special_tokens=False)
     
     # For testing, limit tokens
-    if DEBUG:
-        tokenized_text = tokenized_text[:DEBUG_TRUNCATE_TOKENS]
+    tokenized_text = tokenized_text[:TRUNCATE_TOKENS]
     print(f"Total tokens: {len(tokenized_text)}")
     
     # Create chunks
