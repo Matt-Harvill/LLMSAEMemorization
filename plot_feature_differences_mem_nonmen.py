@@ -22,7 +22,7 @@ combined_df = pd.concat(dfs, ignore_index=True)
 plt.figure(figsize=(10, 6))
 plt.hist(combined_df['Percent_Difference'], bins=30, edgecolor='black')
 plt.xlabel('Percent Difference (100% means only memorized XOR non-memorized sequences have this feature)')
-plt.ylabel('Frequency')
+plt.ylabel('Frequency (Out of ~1M features)')
 plt.title('Percent Differences for Most Polarizing SAE Features across Memorized vs Non-Memorized Sequences')
 plt.grid(True, alpha=0.3)
 
